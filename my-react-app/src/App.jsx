@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom"
 
+import { routes } from './routes/Routes' 
 
 function App() {
 
+  
+
   return (
-    <>
-      sddas
-    </>
+    <div>
+      <Routes>
+        {routes.map(({path, element}, index) => 
+          <Route key={index} path={path} element={element} />
+        )}  
+      </Routes>  
+    </div>
   )
 }
 
